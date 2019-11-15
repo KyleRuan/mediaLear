@@ -1,0 +1,765 @@
+common/osdep.o: x264-stable/common/osdep.c x264-stable/common/osdep.h \
+  config.h
+common/base.o: x264-stable/common/base.c x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h
+common/cpu.o: x264-stable/common/cpu.c x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h
+common/tables.o: x264-stable/common/tables.c x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h
+encoder/api.o: x264-stable/encoder/api.c x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h
+x264.o: x264-stable/x264.c x264-stable/x264cli.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/input/input.h \
+  x264-stable/output/output.h x264-stable/filters/filters.h \
+  x264-stable/filters/video/video.h
+autocomplete.o: x264-stable/autocomplete.c x264-stable/x264cli.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/input/input.h
+input/input.o: x264-stable/input/input.c x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h
+input/timecode.o: x264-stable/input/timecode.c x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h
+input/raw.o: x264-stable/input/raw.c x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h
+input/y4m.o: x264-stable/input/y4m.c x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h
+output/raw.o: x264-stable/output/raw.c x264-stable/output/output.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h
+output/matroska.o: x264-stable/output/matroska.c \
+  x264-stable/output/output.h x264-stable/x264cli.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/output/matroska_ebml.h
+output/matroska_ebml.o: x264-stable/output/matroska_ebml.c \
+  x264-stable/output/output.h x264-stable/x264cli.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/output/matroska_ebml.h
+output/flv.o: x264-stable/output/flv.c x264-stable/output/output.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/output/flv_bytestream.h
+output/flv_bytestream.o: x264-stable/output/flv_bytestream.c \
+  x264-stable/output/output.h x264-stable/x264cli.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/output/flv_bytestream.h
+filters/filters.o: x264-stable/filters/filters.c \
+  x264-stable/filters/filters.h x264-stable/x264cli.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/filters/video/video.h \
+  x264-stable/input/input.h
+filters/video/video.o: x264-stable/filters/video/video.c \
+  x264-stable/filters/video/video.h x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/filters/filters.h
+filters/video/source.o: x264-stable/filters/video/source.c \
+  x264-stable/filters/video/video.h x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/filters/filters.h
+filters/video/internal.o: x264-stable/filters/video/internal.c \
+  x264-stable/filters/video/internal.h x264-stable/filters/video/video.h \
+  x264-stable/input/input.h x264-stable/x264cli.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/filters/filters.h
+filters/video/resize.o: x264-stable/filters/video/resize.c \
+  x264-stable/filters/video/video.h x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/filters/filters.h
+filters/video/fix_vfr_pts.o: x264-stable/filters/video/fix_vfr_pts.c \
+  x264-stable/filters/video/video.h x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/filters/filters.h x264-stable/filters/video/internal.h
+filters/video/select_every.o: x264-stable/filters/video/select_every.c \
+  x264-stable/filters/video/video.h x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/filters/filters.h
+filters/video/crop.o: x264-stable/filters/video/crop.c \
+  x264-stable/filters/video/video.h x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/filters/filters.h
+input/avs.o: x264-stable/input/avs.c x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/extras/avxsynth_c.h
+example.o: x264-stable/example.c x264-stable/x264.h x264_config.h
+common/mc-8.o: x264-stable/common/mc.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h x264-stable/common/arm/mc.h
+common/predict-8.o: x264-stable/common/predict.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/common/arm/predict.h
+common/pixel-8.o: x264-stable/common/pixel.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h x264-stable/common/arm/pixel.h \
+  x264-stable/common/arm/predict.h
+common/macroblock-8.o: x264-stable/common/macroblock.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+common/frame-8.o: x264-stable/common/frame.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h
+common/dct-8.o: x264-stable/common/dct.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h x264-stable/common/arm/dct.h
+common/cabac-8.o: x264-stable/common/cabac.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h
+common/common-8.o: x264-stable/common/common.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+common/rectangle-8.o: x264-stable/common/rectangle.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+common/set-8.o: x264-stable/common/set.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h
+common/quant-8.o: x264-stable/common/quant.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h x264-stable/common/arm/quant.h
+common/deblock-8.o: x264-stable/common/deblock.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+common/vlc-8.o: x264-stable/common/vlc.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h
+common/mvpred-8.o: x264-stable/common/mvpred.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+common/bitstream-8.o: x264-stable/common/bitstream.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+encoder/analyse-8.o: x264-stable/encoder/analyse.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/macroblock.h x264-stable/encoder/me.h \
+  x264-stable/encoder/ratecontrol.h x264-stable/encoder/analyse.h \
+  x264-stable/encoder/rdo.c x264-stable/encoder/cavlc.c \
+  x264-stable/encoder/cabac.c x264-stable/encoder/slicetype.c
+encoder/me-8.o: x264-stable/encoder/me.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h x264-stable/encoder/macroblock.h \
+  x264-stable/encoder/me.h
+encoder/ratecontrol-8.o: x264-stable/encoder/ratecontrol.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/ratecontrol.h x264-stable/encoder/me.h
+encoder/set-8.o: x264-stable/encoder/set.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h x264-stable/encoder/set.h
+encoder/macroblock-8.o: x264-stable/encoder/macroblock.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/macroblock.h
+encoder/cabac-8.o: x264-stable/encoder/cabac.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/macroblock.h
+encoder/cavlc-8.o: x264-stable/encoder/cavlc.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/macroblock.h
+encoder/encoder-8.o: x264-stable/encoder/encoder.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/set.h x264-stable/encoder/analyse.h \
+  x264-stable/encoder/ratecontrol.h x264-stable/encoder/macroblock.h \
+  x264-stable/encoder/me.h
+encoder/lookahead-8.o: x264-stable/encoder/lookahead.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/analyse.h
+common/threadpool-8.o: x264-stable/common/threadpool.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+common/opencl-8.o: x264-stable/common/opencl.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  common/oclobj.h
+encoder/slicetype-cl-8.o: x264-stable/encoder/slicetype-cl.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/macroblock.h x264-stable/encoder/me.h \
+  x264-stable/encoder/slicetype-cl.h
+filters/video/cache-8.o: x264-stable/filters/video/cache.c \
+  x264-stable/filters/video/video.h x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/filters/filters.h x264-stable/filters/video/internal.h \
+  x264-stable/common/common.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h
+filters/video/depth-8.o: x264-stable/filters/video/depth.c \
+  x264-stable/filters/video/video.h x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/filters/filters.h x264-stable/common/common.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+input/thread-8.o: x264-stable/input/thread.c x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/common.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h
+tools/checkasm-8.o: x264-stable/tools/checkasm.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/macroblock.h
+common/mc-10.o: x264-stable/common/mc.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h x264-stable/common/arm/mc.h
+common/predict-10.o: x264-stable/common/predict.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/common/arm/predict.h
+common/pixel-10.o: x264-stable/common/pixel.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h x264-stable/common/arm/pixel.h \
+  x264-stable/common/arm/predict.h
+common/macroblock-10.o: x264-stable/common/macroblock.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+common/frame-10.o: x264-stable/common/frame.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h
+common/dct-10.o: x264-stable/common/dct.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h x264-stable/common/arm/dct.h
+common/cabac-10.o: x264-stable/common/cabac.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h
+common/common-10.o: x264-stable/common/common.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+common/rectangle-10.o: x264-stable/common/rectangle.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+common/set-10.o: x264-stable/common/set.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h
+common/quant-10.o: x264-stable/common/quant.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h x264-stable/common/arm/quant.h
+common/deblock-10.o: x264-stable/common/deblock.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+common/vlc-10.o: x264-stable/common/vlc.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h
+common/mvpred-10.o: x264-stable/common/mvpred.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+common/bitstream-10.o: x264-stable/common/bitstream.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+encoder/analyse-10.o: x264-stable/encoder/analyse.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/macroblock.h x264-stable/encoder/me.h \
+  x264-stable/encoder/ratecontrol.h x264-stable/encoder/analyse.h \
+  x264-stable/encoder/rdo.c x264-stable/encoder/cavlc.c \
+  x264-stable/encoder/cabac.c x264-stable/encoder/slicetype.c
+encoder/me-10.o: x264-stable/encoder/me.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h x264-stable/encoder/macroblock.h \
+  x264-stable/encoder/me.h
+encoder/ratecontrol-10.o: x264-stable/encoder/ratecontrol.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/ratecontrol.h x264-stable/encoder/me.h
+encoder/set-10.o: x264-stable/encoder/set.c x264-stable/common/common.h \
+  x264-stable/common/base.h x264-stable/common/osdep.h config.h \
+  x264-stable/x264.h x264_config.h x264-stable/common/cpu.h \
+  x264-stable/common/tables.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h x264-stable/encoder/set.h
+encoder/macroblock-10.o: x264-stable/encoder/macroblock.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/macroblock.h
+encoder/cabac-10.o: x264-stable/encoder/cabac.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/macroblock.h
+encoder/cavlc-10.o: x264-stable/encoder/cavlc.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/macroblock.h
+encoder/encoder-10.o: x264-stable/encoder/encoder.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/set.h x264-stable/encoder/analyse.h \
+  x264-stable/encoder/ratecontrol.h x264-stable/encoder/macroblock.h \
+  x264-stable/encoder/me.h
+encoder/lookahead-10.o: x264-stable/encoder/lookahead.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/analyse.h
+common/threadpool-10.o: x264-stable/common/threadpool.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+filters/video/cache-10.o: x264-stable/filters/video/cache.c \
+  x264-stable/filters/video/video.h x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/filters/filters.h x264-stable/filters/video/internal.h \
+  x264-stable/common/common.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h
+filters/video/depth-10.o: x264-stable/filters/video/depth.c \
+  x264-stable/filters/video/video.h x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/filters/filters.h x264-stable/common/common.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h
+input/thread-10.o: x264-stable/input/thread.c x264-stable/input/input.h \
+  x264-stable/x264cli.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/common.h x264-stable/common/cabac.h \
+  x264-stable/common/bitstream.h x264-stable/common/set.h \
+  x264-stable/common/predict.h x264-stable/common/pixel.h \
+  x264-stable/common/mc.h x264-stable/common/frame.h \
+  x264-stable/common/dct.h x264-stable/common/quant.h \
+  x264-stable/common/threadpool.h x264-stable/common/macroblock.h \
+  x264-stable/common/rectangle.h
+tools/checkasm-10.o: x264-stable/tools/checkasm.c \
+  x264-stable/common/common.h x264-stable/common/base.h \
+  x264-stable/common/osdep.h config.h x264-stable/x264.h x264_config.h \
+  x264-stable/common/cpu.h x264-stable/common/tables.h \
+  x264-stable/common/cabac.h x264-stable/common/bitstream.h \
+  x264-stable/common/set.h x264-stable/common/predict.h \
+  x264-stable/common/pixel.h x264-stable/common/mc.h \
+  x264-stable/common/frame.h x264-stable/common/dct.h \
+  x264-stable/common/quant.h x264-stable/common/threadpool.h \
+  x264-stable/common/macroblock.h x264-stable/common/rectangle.h \
+  x264-stable/encoder/macroblock.h

@@ -1,0 +1,14 @@
+prefix=/Users/kyleruan/Documents/GitHub/mediaLearn/4day/ffmpeg-output
+exec_prefix=${prefix}
+libdir=/Users/kyleruan/Documents/GitHub/mediaLearn/4day/ffmpeg-output/lib
+includedir=/Users/kyleruan/Documents/GitHub/mediaLearn/4day/ffmpeg-output/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 7.57.100
+Requires: libavutil >= 56.31.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -pthread -lm
+Libs.private: 
+Cflags: -I${includedir}

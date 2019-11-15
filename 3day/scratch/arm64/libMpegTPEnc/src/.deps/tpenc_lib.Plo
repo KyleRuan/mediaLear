@@ -1,0 +1,65 @@
+libMpegTPEnc/src/tpenc_lib.lo: \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/src/tpenc_lib.cpp \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/include/tpenc_lib.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/include/tp_data.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libSYS/include/machine_type.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/include/pthread.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__nullptr \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libSYS/include/FDK_audio.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libSYS/include/genericStds.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libSYS/include/syslib_channelMapDescr.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libFDK/include/FDK_bitstream.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libFDK/include/FDK_bitbuffer.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libFDK/include/FDK_archdef.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/src/tp_version.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/src/tpenc_asc.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/src/tpenc_adts.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPDec/include/tp_data.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libFDK/include/FDK_crc.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/src/tpenc_adif.h \
+  /Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/src/tpenc_latm.h
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/include/tpenc_lib.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/include/tp_data.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libSYS/include/machine_type.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stddef.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/include/pthread.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include/stddef.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__nullptr:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libSYS/include/FDK_audio.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libSYS/include/genericStds.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libSYS/include/syslib_channelMapDescr.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libFDK/include/FDK_bitstream.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libFDK/include/FDK_bitbuffer.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libFDK/include/FDK_archdef.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/src/tp_version.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/src/tpenc_asc.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/src/tpenc_adts.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPDec/include/tp_data.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libFDK/include/FDK_crc.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/src/tpenc_adif.h:
+
+/Users/kyleruan/Documents/GitHub/mediaLearn/3day/opencore-amr-fdk-aac/libMpegTPEnc/src/tpenc_latm.h:
